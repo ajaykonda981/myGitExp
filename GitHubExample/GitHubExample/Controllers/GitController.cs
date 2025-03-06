@@ -29,6 +29,7 @@ namespace GitHubExample.Controllers
         public int Post([FromBody] GitHub gitHub)
         {
             int sum = gitHub.FirstValue + gitHub.SecondValue;
+
             return sum;
         }
 
