@@ -32,6 +32,13 @@ namespace GitHubExample.Controllers
             return sum;
         }
 
+        [HttpPost]
+        public int subPost([FromBody] GitHub gitHub)
+        {
+            int sub = gitHub.FirstValue - gitHub.SecondValue;
+            return sub;
+        }
+
         // PUT api/<GitController>/5
         [HttpPut("{id}")]
         public void Put(int id, [FromBody] string value)
